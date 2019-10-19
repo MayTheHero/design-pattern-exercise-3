@@ -7,13 +7,10 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        CapriciosaPizza capriciosaPizza = new CapriciosaPizza(31.99,Arrays.asList("cheese","champignons","ham"));
-        HawaiPizza hawaiPizza = new HawaiPizza(29.99,Arrays.asList("cheese","pineaple","ham"));
-        MargheritaPizza margheritaPizza = new MargheritaPizza(24, Arrays.asList("cheese"));
-
-        capriciosaPizza.showPizzaInfo();
-        hawaiPizza.showPizzaInfo();
-        margheritaPizza.showPizzaInfo();
+        Pizza capriciosa = PizzaFactory.create(31.99,Arrays.asList("cheese","champignons","ham"),PizzaType.CAPRICIOSA);
+        Pizza margherita = PizzaFactory.create(29.99,Arrays.asList("cheese","sauce"),PizzaType.CAPRICIOSA);
+        capriciosa.showPizzaInfo();
+        margherita.showPizzaInfo();
     }
 
 }
